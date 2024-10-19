@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기후위기대응전람회 안내도</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .responsive-map {
+            position: absolute;
+            border: 2px solid transparent;
+            transition: border 0.2s;
+        }
+
+        .responsive-map:hover {
+            border-color: rgb(98, 218, 130);
+            border-radius: 10px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .active-tab {
+            display: block;
+        }
+
+        .modal {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+
+    <!-- 전체 콘텐츠 -->
+    <div id="floor0" class="tab-content active-tab relative w-full max-w-4xl mx-auto">
+        <img src="전체 이미지.png" alt="전체 이미지" class="w-full h-auto">
+        <div class="responsive-map" style="top: 12%; left: 67%; width: 23%; height: 16%; border-radius: 10px;" onclick="openModal('modal1')"></div>
+        <div class="responsive-map" style="top: 12%; left: 39%; width: 27%; height: 16%; border-radius: 10px;" onclick="openModal('modal2')"></div>
+        <div class="responsive-map" style="top: 12%; left: 10.5%; width: 27%; height: 17%; border-radius: 10px;" onclick="openModal('modal3')"></div>
+        <div class="responsive-map" style="top: 30%; left: 10.5%; width: 27%; height: 17%; border-radius: 10px;" onclick="openModal('modal4')"></div>
+        <div class="responsive-map" style="top: 47.5%; left: 10.5%; width: 27%; height: 17%; border-radius: 10px;" onclick="openModal('modal5')"></div>
+        <div class="responsive-map" style="top: 65%; left: 10.5%; width: 27%; height: 17%; border-radius: 10px;" onclick="openModal('modal6')"></div>
+        <div class="responsive-map" style="top: 82.5%; left: 10.5%; width: 27%; height: 11%; border-radius: 10px;" onclick="openModal('modal7')"></div>
+        <div class="responsive-map" style="top: 84.5%; left: 38.5%; width: 41%; height: 9%; border-radius: 10px;" onclick="openModal('modal8')"></div>
+        <div class="responsive-map" style="top: 35%; left: 78.5%; width: 12%; height: 11%; border-radius: 10px;" onclick="openModal('modal9')"></div>
+        <div class="responsive-map" style="top: 32%; left: 47%; width: 23%; height: 46%; border-radius: 10px;" onclick="openModal('modal10')"></div>
+    </div>
+
+    <!-- 모달 1 -->
+    <div id="modal1" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4">재미나게, 친환경!</h2>
+            <img src="재미나게 친환경.png" alt="Interactive Image" class="w-full h-auto cursor-pointer" onclick="closeModal('modal1')">
+        </div>
+    </div>
+
+    <!-- 모달 2 -->
+    <div id="modal2" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4">낱말퍼즐</h2>
+            <img src="낱말퍼즐.png" alt="Interactive Image" class="w-full h-auto cursor-pointer" onclick="closeModal('modal2')">
+        </div>
+    </div>
+
+    <!-- 모달 3 -->
+    <div id="modal3" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4">고체치약 만들기</h2>
+            <img src="고체치약.png" alt="Interactive Image" class="w-full h-auto cursor-pointer" onclick="closeModal('modal3')">
+        </div>
+    </div>
+
+    <!-- 모달 4 -->
+    <div id="modal4" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4">업사이클링 키링 만들기</h2>
+            <img src="키링.png" alt="Interactive Image" class="w-full h-auto cursor-pointer" onclick="closeModal('modal4')">
+        </div>
+    </div>
+
+    <!-- 모달 5 -->
+    <div id="modal5" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4">샴푸바 만들기</h2>
+            <img src="샴푸바.png" alt="Interactive Image" class="w-full h-auto cursor-pointer" onclick="closeModal('modal5')">
+        </div>
+    </div>
+
+    <!-- 모달 6 -->
+    <div id="modal6" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4">천연세제 만들기</h2>
+            <img src="천연세제.png" alt="Interactive Image" class="w-full h-auto cursor-pointer" onclick="closeModal('modal6')">
+        </div>
+    </div>
+
+    <!-- 모달 7 -->
+    <div id="modal7" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4">거울 포토존</h2>
+            <img src="거울 포토존.png" alt="Interactive Image" class="w-full h-auto cursor-pointer" onclick="closeModal('modal7')">
+        </div>
+    </div>
+
+    <!-- 모달 8 -->
+    <div id="modal8" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4">지구 살림 장터</h2>
+            <img src="지구 살림 장터.png" alt="Interactive Image" class="w-full h-auto cursor-pointer" onclick="closeModal('modal8')">
+        </div>
+    </div>
+
+    <!-- 모달 9 -->
+    <div id="modal9" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4">꽃 포토존</h2>
+            <img src="꽃 포토존.png" alt="Interactive Image" class="w-full h-auto cursor-pointer" onclick="closeModal('modal9')">
+        </div>
+    </div>
+
+    <!-- 모달 10 -->
+    <div id="modal10" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4">학술부스</h2>
+            <img src="학술부스.png" alt="Interactive Image" class="w-full h-auto cursor-pointer" onclick="closeModal('modal10')">
+        </div>
+    </div>
+
+    <!-- JavaScript to handle tab switching and modal opening/closing -->
+    <script>
+        function openTab(event, tabId) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active-tab'));
+            document.getElementById(tabId).classList.add('active-tab');
+
+            const tabButtons = document.querySelectorAll('button');
+            tabButtons.forEach(button => button.classList.remove('text-blue-500'));
+            event.currentTarget.classList.add('text-blue-500');
+        }
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('show');
+            modal.onclick = function(event) {
+                if (event.target === modal) {
+                    closeModal(modalId);
+                }
+            };
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('show');
+        }
+    </script>
+
+</body>
+</html>
